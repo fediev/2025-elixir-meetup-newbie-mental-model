@@ -10,8 +10,10 @@ defmodule Recurse do
 
   def balance_2(transactions), do: balance_2(transactions, 0, [])
 
-  defp balance_2([head | tail], balance, history),
-    do: balance(tail, balance + head, history ++ [balance + head])
+  defp balance_2([head | tail], balance, history) do
+    new_balance = balance + head
+    balance(tail, new_balance, history ++ [new_balance])
+  end
 
   defp balance_2([], _balance, history), do: history
 end

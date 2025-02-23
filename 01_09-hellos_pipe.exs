@@ -1,11 +1,11 @@
-# no method chaining
+# pipe operator for chaining
 defmodule Greeting do
   def hello(name) do
     IO.puts("Hello #{name}!")
   end
 
   def hellos(names) do
-    there = Enum.join(Enum.sort(Enum.map(names, &String.capitalize/1)), ", ")
+    there = names |> Enum.map(&String.capitalize/1) |> Enum.sort() |> Enum.join(", ")
 
     hello(there)
   end

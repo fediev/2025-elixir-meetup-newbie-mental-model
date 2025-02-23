@@ -1,3 +1,4 @@
+# no `else if`
 defmodule Prime do
   def is_prime?(n) do
     if n < 2 do
