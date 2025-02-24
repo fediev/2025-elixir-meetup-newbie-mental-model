@@ -23,5 +23,5 @@ def fibo_memo(n):
     return memo[n]
 
 
-for i in range(0, 5):
+for i in range(0, 10):
     print(fibo_memo(i))

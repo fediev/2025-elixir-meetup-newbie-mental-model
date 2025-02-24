@@ -6,7 +6,7 @@ function hello(name) {
 }
 
 function hellos(names) {
-  there = names
+  const there = names
     .map((name) => name[0].toUpperCase() + name.substring(1))
     .toSorted()
     .join(', ');
